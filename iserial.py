@@ -48,7 +48,7 @@ def main():
   buffer = []
 
   while True:
-    #print(ser.inWaiting())
+   try: #print(ser.inWaiting())
     if ser.inWaiting() > 39:
       buffer = ser.readlines()
       serialread = buffer[:2] #take only the last 2 items
@@ -64,6 +64,9 @@ def main():
     ##TODO search for properly formatted ibuttons or bail
     ## if invalid ibuttons come in that wait
     ## TODO add security here :)
+   except:
+     print("Serial IO error. Exiting")
+     sys.exit()
   ser.close()
 
 def ivalidate(ibuttons):
