@@ -6,7 +6,7 @@
 
 
 import serial
-import time, sys
+import time, sys, re
 from optparse import OptionParser
 
 
@@ -46,21 +46,34 @@ def main():
     sys.exit()
 
   buffer = []
-  buff = ''
 
   while True:
     #print(ser.inWaiting())
     if ser.inWaiting() > 39:
-      buff = ser.readlines()
-      buffer.append(buff)
-      print(buffer)
-      buffer = []
+      buffer = ser.readlines()
+      serialread = buffer[:2] #take only the last 2 items
+      print(ivalidate(serialread))
+
+      ###
+      #  interface with next portion of code here
+      ###
+
+
     else:
       time.sleep(.5)  ##TODO make more elegant
     ##TODO search for properly formatted ibuttons or bail
     ## if invalid ibuttons come in that wait
     ## TODO add security here :)
   ser.close()
+
+def ivalidate(ibuttons):
+  #validate the input from a user
+  ipattern = re.compile('^!,([A-F0-9]{16})')
+  for i in ibuttons:
+    imatch = ipattern.match(i)
+    if imatch: return imatch.group(0)[2:] #strip the first two chars
+    else: return None
+  
 
 def test(ser):
   #make sure connection is good
