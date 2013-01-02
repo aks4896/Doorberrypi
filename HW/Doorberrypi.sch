@@ -1,0 +1,556 @@
+EESchema Schematic File Version 2  date Mon 31 Dec 2012 02:12:00 PM EST
+LIBS:IC_raspberry
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Doorberrypi-cache
+EELAYER 27 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Doorberrypi Daughtercard"
+Date "31 dec 2012"
+Rev "A"
+Comp "Interlock Rochester"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RASPBERRY_IO J?
+U 1 1 50E1C0D8
+P 2750 4500
+F 0 "J?" H 2750 5200 60  0000 C CNN
+F 1 "RASPBERRY_IO" V 2750 4500 50  0000 C CNN
+	1    2750 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BARREL_JACK J?
+U 1 1 50E1C2E5
+P 1900 1850
+F 0 "J?" H 1900 2100 60  0000 C CNN
+F 1 "BARREL_JACK" H 1900 1650 60  0000 C CNN
+	1    1900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 J?
+U 1 1 50E1C33D
+P 9450 2400
+F 0 "J?" H 9400 2600 40  0000 C CNN
+F 1 "Term Block 2x1" H 9500 2200 40  0000 C CNN
+	1    9450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 J?
+U 1 1 50E1C34C
+P 9450 3950
+F 0 "J?" H 9400 4150 40  0000 C CNN
+F 1 "Term Block 2x1" H 9500 3750 40  0000 C CNN
+	1    9450 3950
+	1    0    0    -1  
+$EndComp
+Text Notes 1300 1450 0    60   ~ 0
+9V-18V input (5W minimum)
+Wire Wire Line
+	3150 4100 3350 4100
+Wire Wire Line
+	3350 4100 3350 5300
+Wire Wire Line
+	3150 4500 3350 4500
+Connection ~ 3350 4500
+Wire Wire Line
+	3150 4800 3350 4800
+Connection ~ 3350 4800
+Wire Wire Line
+	2350 4300 2200 4300
+Wire Wire Line
+	2200 4300 2200 5300
+Wire Wire Line
+	2350 5100 2200 5100
+Connection ~ 2200 5100
+$Comp
+L GND #PWR?
+U 1 1 50E1C96F
+P 2200 5300
+F 0 "#PWR?" H 2200 5300 30  0001 C CNN
+F 1 "GND" H 2200 5230 30  0001 C CNN
+	1    2200 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50E1C97E
+P 3350 5300
+F 0 "#PWR?" H 3350 5300 30  0001 C CNN
+F 1 "GND" H 3350 5230 30  0001 C CNN
+	1    3350 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4000 3150 4000
+Wire Wire Line
+	3350 3750 3350 4000
+Wire Wire Line
+	3150 3900 3350 3900
+Connection ~ 3350 3900
+$Comp
+L +5V #PWR?
+U 1 1 50E1C9A7
+P 3350 3750
+F 0 "#PWR?" H 3350 3840 20  0001 C CNN
+F 1 "+5V" H 3350 3840 30  0000 C CNN
+	1    3350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 50E1C9C0
+P 2200 3750
+F 0 "#PWR?" H 2200 3710 30  0001 C CNN
+F 1 "+3.3V" H 2200 3860 30  0000 C CNN
+	1    2200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3900 2200 3900
+Wire Wire Line
+	2200 3900 2200 3750
+$Comp
+L LM7805 U?
+U 1 1 50E1CAF5
+P 4250 1800
+F 0 "U?" H 4100 2000 60  0000 C CNN
+F 1 "V7805-2000" H 4550 1600 60  0000 C CNN
+	1    4250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50E1CBEC
+P 4250 2300
+F 0 "#PWR?" H 4250 2300 30  0001 C CNN
+F 1 "GND" H 4250 2230 30  0001 C CNN
+	1    4250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50E1CBF3
+P 2350 2150
+F 0 "#PWR?" H 2350 2150 30  0001 C CNN
+F 1 "GND" H 2350 2080 30  0001 C CNN
+	1    2350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2050 4250 2300
+Wire Wire Line
+	2200 1850 2350 1850
+Wire Wire Line
+	2350 1850 2350 2150
+Wire Wire Line
+	2200 1950 2350 1950
+Connection ~ 2350 1950
+Wire Wire Line
+	3100 1750 3850 1750
+$Comp
+L +5V #PWR?
+U 1 1 50E1CC5D
+P 5150 1550
+F 0 "#PWR?" H 5150 1640 20  0001 C CNN
+F 1 "+5V" H 5150 1640 30  0000 C CNN
+	1    5150 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1750 5150 1750
+Wire Wire Line
+	5150 1550 5150 1850
+$Comp
+L C C?
+U 1 1 50E1CD0E
+P 3550 2050
+F 0 "C?" H 3600 2150 50  0000 L CNN
+F 1 "10uF" H 3600 1950 50  0000 L CNN
+	1    3550 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 50E1CD1D
+P 5150 2050
+F 0 "C?" H 5200 2150 50  0000 L CNN
+F 1 "22uF" H 5200 1950 50  0000 L CNN
+	1    5150 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50E1CD43
+P 3550 2300
+F 0 "#PWR?" H 3550 2300 30  0001 C CNN
+F 1 "GND" H 3550 2230 30  0001 C CNN
+	1    3550 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50E1CD49
+P 5150 2300
+F 0 "#PWR?" H 5150 2300 30  0001 C CNN
+F 1 "GND" H 5150 2230 30  0001 C CNN
+	1    5150 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2250 5150 2300
+Wire Wire Line
+	3550 2300 3550 2250
+Connection ~ 5150 1750
+Wire Wire Line
+	3550 1550 3550 1850
+Connection ~ 3550 1750
+$Comp
+L DIODESCH D?
+U 1 1 50E1CEAF
+P 2900 1750
+F 0 "D?" H 2900 1850 40  0000 C CNN
+F 1 "DIODESCH" H 2900 1650 40  0000 C CNN
+	1    2900 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1750 2200 1750
+Text Notes 9150 2100 0    60   ~ 0
+iButton Connector
+$Comp
+L CONN_2 J?
+U 1 1 50E1D148
+P 8850 6100
+F 0 "J?" H 8800 6300 40  0000 C CNN
+F 1 "Term Block 2x1" H 8900 5900 40  0000 C CNN
+	1    8850 6100
+	1    0    0    -1  
+$EndComp
+Text Notes 8900 5800 0    60   ~ 0
+Door Solonoid\n
+$Comp
+L MOSFET_N Q?
+U 1 1 50E1D80A
+P 8200 6500
+F 0 "Q?" H 8500 6600 60  0000 R CNN
+F 1 "IRLML6344" H 8850 6500 60  0000 R CNN
+	1    8200 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 6200 8300 6200
+Wire Wire Line
+	8300 6200 8300 6300
+$Comp
+L GND #PWR?
+U 1 1 50E1DA89
+P 8300 7100
+F 0 "#PWR?" H 8300 7100 30  0001 C CNN
+F 1 "GND" H 8300 7030 30  0001 C CNN
+	1    8300 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 6700 8300 7100
+$Comp
+L VPP #PWR?
+U 1 1 50E1DB65
+P 3550 1550
+F 0 "#PWR?" H 3550 1750 40  0001 C CNN
+F 1 "VPP" H 3550 1700 40  0000 C CNN
+	1    3550 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L VPP #PWR?
+U 1 1 50E1DB94
+P 8300 5250
+F 0 "#PWR?" H 8300 5450 40  0001 C CNN
+F 1 "VPP" H 8300 5400 40  0000 C CNN
+	1    8300 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 6000 8300 6000
+Wire Wire Line
+	8300 6000 8300 5800
+$Comp
+L R R?
+U 1 1 50E1DBBF
+P 8300 5550
+F 0 "R?" H 8400 5650 50  0000 L CNN
+F 1 "JUMPER" H 8400 5550 50  0000 L CNN
+	1    8300 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 5250 8300 5300
+$Comp
+L DOUBLE_SCHOTTKY D?
+U 1 1 50E1DC44
+P 7650 2000
+F 0 "D?" H 7500 2200 40  0000 L CNN
+F 1 "BAT54S" H 7500 2100 40  0000 L CNN
+	1    7650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2300 7800 2300
+Wire Wire Line
+	7650 2300 7650 2200
+$Comp
+L DOUBLE_SCHOTTKY D?
+U 1 1 50E1DCA5
+P 7650 3550
+F 0 "D?" H 7500 3750 40  0000 L CNN
+F 1 "BAT54S" H 7500 3650 40  0000 L CNN
+	1    7650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3850 7800 3850
+Wire Wire Line
+	7650 3850 7650 3750
+$Comp
+L +3.3V #PWR?
+U 1 1 50E1DCAD
+P 8150 3500
+F 0 "#PWR?" H 8150 3460 30  0001 C CNN
+F 1 "+3.3V" H 8150 3610 30  0000 C CNN
+	1    8150 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3550 8150 3550
+Wire Wire Line
+	8150 3550 8150 3500
+$Comp
+L +3.3V #PWR?
+U 1 1 50E1DCDC
+P 8150 1950
+F 0 "#PWR?" H 8150 1910 30  0001 C CNN
+F 1 "+3.3V" H 8150 2060 30  0000 C CNN
+	1    8150 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2000 8150 2000
+Wire Wire Line
+	8150 2000 8150 1950
+$Comp
+L GND #PWR?
+U 1 1 50E1DCE4
+P 7150 3600
+F 0 "#PWR?" H 7150 3600 30  0001 C CNN
+F 1 "GND" H 7150 3530 30  0001 C CNN
+	1    7150 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3600 7150 3550
+Wire Wire Line
+	7150 3550 7250 3550
+$Comp
+L GND #PWR?
+U 1 1 50E1DD1E
+P 7150 2050
+F 0 "#PWR?" H 7150 2050 30  0001 C CNN
+F 1 "GND" H 7150 1980 30  0001 C CNN
+	1    7150 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2050 7150 2000
+Wire Wire Line
+	7150 2000 7250 2000
+Connection ~ 7650 2300
+$Comp
+L R R?
+U 1 1 50E1DE39
+P 8050 2300
+F 0 "R?" V 7950 2200 50  0000 L CNN
+F 1 "33" V 8150 2200 50  0000 L CNN
+	1    8050 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 50E1DE87
+P 8050 3850
+F 0 "R?" V 7950 3750 50  0000 L CNN
+F 1 "33" V 8150 3750 50  0000 L CNN
+	1    8050 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8300 3850 9100 3850
+Connection ~ 7650 3850
+Wire Wire Line
+	8300 2300 9100 2300
+$Comp
+L GND #PWR?
+U 1 1 50E1DF62
+P 8400 4100
+F 0 "#PWR?" H 8400 4100 30  0001 C CNN
+F 1 "GND" H 8400 4030 30  0001 C CNN
+	1    8400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50E1DF68
+P 8400 2550
+F 0 "#PWR?" H 8400 2550 30  0001 C CNN
+F 1 "GND" H 8400 2480 30  0001 C CNN
+	1    8400 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2500 8400 2500
+Wire Wire Line
+	8400 2500 8400 2550
+Wire Wire Line
+	9100 4050 8400 4050
+Wire Wire Line
+	8400 4050 8400 4100
+$Comp
+L R R?
+U 1 1 50E1E0BA
+P 7500 6500
+F 0 "R?" V 7400 6400 50  0000 L CNN
+F 1 "33" V 7600 6400 50  0000 L CNN
+	1    7500 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 50E1E0C0
+P 7850 6800
+F 0 "R?" H 7950 6900 50  0000 L CNN
+F 1 "10k" H 7950 6800 50  0000 L CNN
+	1    7850 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50E1E0C6
+P 7850 7100
+F 0 "#PWR?" H 7850 7100 30  0001 C CNN
+F 1 "GND" H 7850 7030 30  0001 C CNN
+	1    7850 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 7050 7850 7100
+Wire Wire Line
+	7750 6500 8000 6500
+Wire Wire Line
+	7850 6550 7850 6500
+Connection ~ 7850 6500
+Text Notes 9100 3600 0    60   ~ 0
+Magnetic Reed Switch\n
+$Comp
+L R R?
+U 1 1 50E1E1D1
+P 8750 3550
+F 0 "R?" H 8850 3650 50  0000 L CNN
+F 1 "10k" H 8850 3550 50  0000 L CNN
+	1    8750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 50E1E1D7
+P 8750 1950
+F 0 "R?" H 8850 2050 50  0000 L CNN
+F 1 "10k" H 8850 1950 50  0000 L CNN
+	1    8750 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 50E1E1E8
+P 8750 3250
+F 0 "#PWR?" H 8750 3210 30  0001 C CNN
+F 1 "+3.3V" H 8750 3360 30  0000 C CNN
+	1    8750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 50E1E1EE
+P 8750 1650
+F 0 "#PWR?" H 8750 1610 30  0001 C CNN
+F 1 "+3.3V" H 8750 1760 30  0000 C CNN
+	1    8750 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 1700 8750 1650
+Wire Wire Line
+	8750 2200 8750 2300
+Connection ~ 8750 2300
+Wire Wire Line
+	8750 3300 8750 3250
+Wire Wire Line
+	8750 3800 8750 3850
+Connection ~ 8750 3850
+Text Label 7200 3850 0    60   ~ 0
+REED_SW
+Text Label 7200 2300 0    60   ~ 0
+I_BUTTON
+Wire Wire Line
+	7250 6500 6650 6500
+Text Label 6650 6500 0    60   ~ 0
+DOOR_LATCH
+Wire Wire Line
+	4400 5100 3800 5100
+Text Label 3800 5100 0    60   ~ 0
+DOOR_LATCH
+Wire Wire Line
+	3800 4950 4400 4950
+Text Label 3800 4950 0    60   ~ 0
+REED_SW
+Wire Wire Line
+	3800 4800 4400 4800
+Text Label 3800 4800 0    60   ~ 0
+I_BUTTON
+$EndSCHEMATC
